@@ -1,0 +1,85 @@
+/* style.css */
+
+/* Navbar roxa */
+.navbar {
+  background-color: #6E4062 !important; 
+}
+
+/* Links, textos e ícones brancos */
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar a,
+.navbar i {
+  color: #ffffff !important;
+}
+
+/* Hover em amarelo */
+.navbar .nav-link:hover,
+.navbar a:hover,
+.navbar i:hover {
+  color: #ffcc00 !important;
+}
+
+/* Ícone de notificação maiorzinho */
+.navbar .bi-bell {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+/* aumenta só o ícone do menu lateral */
+.navbar .bi-list {
+  font-size: 1.5rem; /* maior */
+  margin-left: 5px;   /* distancia da borda esquerda */
+  
+}
+
+/* aumenta o sininho também */
+.navbar .bi-bell {
+  font-size: 1.5rem;
+  margin-right: 20px;  /* distancia da borda direita */
+}
+
+/* Menu Lateral */
+#menuLateral {
+  width: 250px;
+  background-color: #6E4062; /* roxo escuro */
+  color: white;
+}
+
+/* Cabeçalho do usuário */
+.menu-header {
+  background-color: #9b6fa8; /* roxo mais claro */
+  color: white;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.menu-header img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* Itens do menu */
+.menu-body .nav-link {
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-body .nav-link:hover {
+  background-color: #7d4f7b; /* roxo mais claro no hover */
+  color: #ffcc00;
+}
+
+.menu-body .nav-link i {
+  font-size: 1.2rem;
+}
+
+/* Separar o botão Sair */
+.menu-body ul:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
