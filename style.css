@@ -13,11 +13,11 @@
   color: #ffffff !important;
 }
 
-/* Hover em amarelo */
+/* Hover azul */
 .navbar .nav-link:hover,
 .navbar a:hover,
 .navbar i:hover {
-  color: #ffcc00 !important;
+  color: #4386DF !important;
 }
 
 /* Ícone de notificação maiorzinho */
@@ -70,7 +70,7 @@
 
 .menu-body .nav-link:hover {
   background-color: #7d4f7b; /* roxo mais claro no hover */
-  color: #ffcc00;
+  color: #4386DF;
 }
 
 .menu-body .nav-link i {
@@ -113,3 +113,4 @@
   color: #333;
   pointer-events: none; /* evita que o ícone bloqueie o clique no input */
 }
+
