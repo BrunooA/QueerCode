@@ -115,4 +115,134 @@
   pointer-events: none; /* evita que o ícone bloqueie o clique no input */
 }
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: "Inter", "Roboto", Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
 
+/* área que segura a grade (centralizada na página) */
+.cards-container {
+  max-width: 1200px;      /* largura máxima da área de cards */
+  margin: 40px auto;      /* centraliza e dá espaçamento vertical */
+  padding: 0 40px;        /* espaçamento lateral */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px 28px;         /* gap entre linhas e colunas */
+  align-items: start;
+}
+
+/* cada card */
+.card {
+  background: #f6f6f6;            /* leve tom de cinza como na sua imagem */
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 6px 16px rgba(18, 18, 18, 0.07);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+  transition: transform .12s ease, box-shadow .12s ease;
+  outline: none;
+}
+
+/* hover / foco */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(18,18,18,0.10);
+}
+
+/* estilo quando o card está "selecionado" (como o com borda azul) */
+.card:focus-within,
+.card.selected {
+  box-shadow:
+    0 10px 22px rgba(18,18,18,0.10),
+    0 0 0 3px rgba(67,138,255,0.20); /* borda azul translúcida */
+  transform: translateY(-2px);
+}
+
+/* cabeçalho do card (logo + nome + localização) */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+/* logo circular */
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 36px;
+  background: #ffeb3b; /* caso a imagem não carregue, fica amarelo parecido com Mercado Livre */
+}
+
+/* nome da empresa */
+.card-header .company {
+  flex: 1;
+  margin-left: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* localização alinhada à direita (pequeno) */
+.card-header .location {
+  white-space: nowrap;
+  font-size: 13px;
+  color: #8b8b8b;
+  margin-left: 12px;
+}
+
+/* corpo do card */
+.card-body {
+  font-size: 13.5px;
+  color: #2b2b2b;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.card-body strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+/* pequenos detalhes como tipo de vaga, salário etc */
+.card-body p {
+  margin: 6px 0;
+  color: #666;
+  font-size: 13px;
+}
+
+/* footer do card (link detalhes) */
+.card-footer {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.card-footer a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  color: #222;
+}
+
+/* responsividade */
+@media (max-width: 1100px) {
+  .cards-container { grid-template-columns: repeat(2, 1fr); max-width: 900px; }
+}
+
+@media (max-width: 640px) {
+  .cards-container { grid-template-columns: 1fr; padding: 0 20px; gap: 20px; }
+  .card { padding: 14px; }
+  .logo { width: 32px; height: 32px; flex: 0 0 32px; }
+}
