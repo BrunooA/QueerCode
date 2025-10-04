@@ -1,0 +1,160 @@
+/* Navbar roxa */
+.navbar {
+  background-color: #6E4062 !important; 
+}
+
+/* Links, textos e ícones brancos */
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar a,
+.navbar i {
+  color: #ffffff !important;
+}
+
+/* Hover azul */
+.navbar .nav-link:hover,
+.navbar a:hover,
+.navbar i:hover {
+  color: #4386DF !important;
+}
+
+/* Ícone de notificação maiorzinho */
+.navbar .bi-bell {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+/* aumenta só o ícone do menu lateral */
+.navbar .bi-list {
+  font-size: 1.5rem; /* maior */
+  margin-left: 5px;   /* distancia da borda esquerda */
+  
+}
+
+/* aumenta o sininho também */
+.navbar .bi-bell {
+  font-size: 1.5rem;
+  margin-right: 20px;  /* distancia da borda direita */
+}
+
+/* Menu Lateral */
+#menuLateral {
+  width: 250px;
+  background-color: #6E4062; /* roxo escuro */
+  color: white;
+}
+
+/* Cabeçalho do usuário */
+.menu-header {
+  background-color: #9b6fa8; /* roxo mais claro */
+  color: white;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.menu-header img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* Itens do menu */
+.menu-body .nav-link {
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-body .nav-link:hover {
+  background-color: #7d4f7b; /* roxo mais claro no hover */
+  color: #4386DF;
+}
+
+.menu-body .nav-link i {
+  font-size: 1.2rem;
+}
+
+/* Separar o botão Sair */
+.menu-body ul:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Container do perfil */
+.perfil-container {
+  max-width: 1000px;   /* largura do quadrado de fundo */
+  margin: 40px auto;
+  background: #e9e9e9;
+  padding: 20px;
+  border-radius: 0px;
+  text-align: center;
+}
+
+/* Área dos botões */
+.botoes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;   /* força centralizar os botões */
+}
+
+/* Cada botão */
+.botoes button {
+  width: 100%;          /* ocupa todo o espaço do limite definido */
+  max-width: 500px;     /* botão nunca passa de 300px */
+  padding: 12px;
+  border-radius: 20px;
+  background-color: #F7A8B8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+
+}
+
+/* Foto de perfil */
+.foto-perfil img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #f90000;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Avaliação */
+.avaliacao {
+  margin: 15px 0;
+  font-size: 20px;
+  color: #4CAF50;
+}
+
+.nota {
+  background: #ddd;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-left: 5px;
+  color: #333;
+}
+
+/* Nome e gênero */
+.dados h2, .dados h3 {
+  margin: 5px 0;
+  color: #333;
+  font-family: 'Arial', monospace; /* troque pela fonte que quiser */
+  font-size: 20px; /* tamanho da letra */
+  padding: 5px;
+  font-weight: bold; /* negrito */
+}
+}
+
+
+.botoes button:hover {
+  background-color: #F86999;
+}
+
