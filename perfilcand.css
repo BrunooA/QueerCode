@@ -151,10 +151,39 @@
   padding: 5px;
   font-weight: bold; /* negrito */
 }
-}
-
-
 .botoes button:hover {
   background-color: #F86999;
 }
 
+.avaliacao {
+  font-size: 30px; /* tamanho das estrelas */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* espaço entre as estrelas */
+  font-size: 30px;           /* tamanho das estrelas */
+  display: flex;             /* ativa Flexbox */
+  justify-content: center;   /* centraliza horizontalmente */
+  align-items: center;       /* centraliza verticalmente */
+  gap: 1px; 
+     
+}
+
+.estrela.cheia {
+  color: 78E865; /* estrelas pintadas */
+   transition: color 0.3s ease; /* animação suave */
+}
+
+.estrela.vazia {
+  color: lightgray; /* estrela vazia */
+}
+
+.estrela:hover {
+  color: rgb(0, 90, 16); /* muda a cor quando o mouse passa */
+  cursor: pointer;
+}
+
+.nota {
+  font-size: 18px;
+  color: black;
+  margin-left: 10px;
+}
