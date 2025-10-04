@@ -48,7 +48,7 @@
 
 /* Cabeçalho do usuário */
 .menu-header {
-  background-color: #9b6fa8; /* roxo mais claro */
+  background-color: lch(13.58% 21.94 336.96 / 0.671) ; /* roxo mais claro */
   color: white;
   text-align: center;
   padding-bottom: 15px;
