@@ -14,46 +14,18 @@
 
   <!-- Seu CSS -->
   <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    .search-container {
-      position: relative;
-      max-width: 400px;
-      margin: 0 auto 20px auto;
-    }
-
-    .search-input {
-      width: 100%;
-      padding: 8px 35px 8px 12px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-    }
-
-    .search-icon {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #888;
-      cursor: pointer;
-    }
-
-    .logo {
-      border-radius: 5px;
-    }
-  </style>
 </head>
 
 <body>
 
   <!-- Navbar roxa com ícones brancos -->
-  <nav class="navbar bg-primary text-white">
+  <nav class="navbar">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
       <!-- Botão menu lateral -->
       <button class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral"
         aria-controls="menuLateral">
-        <i class="bi bi-list fs-3"></i>
+        <i class="bi bi-list"></i>
       </button>
 
       <!-- Ícone de notificação -->
@@ -69,8 +41,7 @@
     <div class="offcanvas-header p-0">
       <div class="d-flex flex-column align-items-center w-100 menu-header">
         <a href="perfilcandidato.html">
-          <img id="menuFoto" src="img/perfil.jpg" alt="Foto do usuário" class="rounded-circle mt-3"
-            style="cursor:pointer; width:100px; height:100px; object-fit:cover;">
+          <img id="menuFoto" src="img/perfil.jpg" alt="Foto do usuário" class="rounded-circle mt-3">
         </a>
         <h5 id="menuNome" class="mt-2">Usuário</h5>
         <small id="menuPerfil">Candidato(a)</small>
@@ -100,17 +71,16 @@
       <i class="bi bi-search search-icon"></i>
     </div>
 
-    <h1 class="text-center mb-2" style="font-size: 24px;">Sejam bem-vindos à nossa plataforma, QueerCode</h1>
-    <p class="text-center" style="font-size: 14px;">Impulsionamos carreiras na tecnologia, valorizando diversidade,
-      inclusão e inovação.</p>
+    <h1 class="text-center mb-2">Sejam bem-vindos à nossa plataforma, QueerCode</h1>
+    <p class="text-center">Impulsionamos carreiras na tecnologia, valorizando diversidade, inclusão e inovação.</p>
   </div>
 
   <div class="container cards-container mt-4">
-    <!-- Exemplo de cards -->
-    <div class="card mb-3" data-titulo="Mercado Livre Analista de TI Suporte Técnico">
+    <!-- Vagas Freelancer -->
+    <div class="card" data-titulo="Mercado Livre Analista de TI Suporte Técnico">
       <div class="card-header d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-2">
-          <img src="img/LogoDegrade.png" alt="Logo" class="logo" style="width:40px; height:40px;">
+          <img src="img/LogoDegrade.png" alt="Logo" class="logo">
           <span>Mercado Livre</span>
         </div>
         <span class="location">📍 Remoto</span>
@@ -125,10 +95,10 @@
       </div>
     </div>
 
-    <div class="card mb-3" data-titulo="IBM Desenvolvedor Front-End">
+    <div class="card" data-titulo="IBM Desenvolvedor Front-End">
       <div class="card-header d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-2">
-          <img src="img/ibm.png" alt="Logo" class="logo" style="width:40px; height:40px;">
+          <img src="img/ibm.png" alt="Logo" class="logo">
           <span>IBM</span>
         </div>
         <span class="location">📍 Remoto</span>
@@ -143,10 +113,10 @@
       </div>
     </div>
 
-    <div class="card mb-3" data-titulo="Microsoft Engenheiro de Software">
+    <div class="card" data-titulo="Microsoft Engenheiro de Software">
       <div class="card-header d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-2">
-          <img src="img/microsoft.png" alt="Logo" class="logo" style="width:40px; height:40px;">
+          <img src="img/microsoft.png" alt="Logo" class="logo">
           <span>Microsoft</span>
         </div>
         <span class="location">📍 Remoto</span>
@@ -161,10 +131,10 @@
       </div>
     </div>
 
-    <div class="card mb-3" data-titulo="Google Analista de Dados">
+    <div class="card" data-titulo="Google Analista de Dados">
       <div class="card-header d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-2">
-          <img src="img/google.png" alt="Logo" class="logo" style="width:40px; height:40px;">
+          <img src="img/google.png" alt="Logo" class="logo">
           <span>Google</span>
         </div>
         <span class="location">📍 Remoto</span>
@@ -184,33 +154,11 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- JS da página -->
+  <!-- Script da página -->
+  <script src="js/script.js"></script>
   <script>
+    // Busca de vagas
     document.addEventListener("DOMContentLoaded", () => {
-      const btnSair = document.getElementById("btnSair");
-      const menuFoto = document.getElementById("menuFoto");
-      const menuNome = document.getElementById("menuNome");
-      const menuPerfil = document.getElementById("menuPerfil");
-
-      // Recupera dados do usuário do localStorage
-      const dados = JSON.parse(localStorage.getItem("dadosCadastro") || "{}");
-
-      if (dados) {
-        menuNome.textContent = dados.nome || "Usuário";
-        menuPerfil.textContent = dados.perfil || "Candidato(a)";
-
-        if (dados.foto) {
-          menuFoto.src = dados.foto;
-        }
-      }
-
-      // Logout
-      btnSair.addEventListener("click", () => {
-        localStorage.removeItem("dadosCadastro"); // remove dados
-        window.location.href = "login.html"; // redireciona para login
-      });
-
-      // Busca de vagas
       const searchInput = document.querySelector('.search-input');
       const cards = document.querySelectorAll('.cards-container .card');
 
@@ -228,6 +176,6 @@
       });
     });
   </script>
-</body>
 
+</body>
 </html>
