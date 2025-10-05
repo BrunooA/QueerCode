@@ -1,11 +1,10 @@
-/* style.css */
-
-/* Navbar roxa */
+/* ==============================
+   NAVBAR
+   ============================== */
 .navbar {
-  background-color: #6E4062 !important; 
+  background-color: #6E4062 !important;
 }
 
-/* Links, textos e ícones brancos */
 .navbar .nav-link,
 .navbar .navbar-brand,
 .navbar a,
@@ -13,42 +12,38 @@
   color: #ffffff !important;
 }
 
-/* Hover azul */
 .navbar .nav-link:hover,
 .navbar a:hover,
 .navbar i:hover {
   color: #4386DF !important;
 }
 
-/* Ícone de notificação maiorzinho */
-.navbar .bi-bell {
-  font-size: 1.5rem;
-  position: relative;
-}
-
-/* aumenta só o ícone do menu lateral */
+/* Ícones da navbar */
+.navbar .bi-bell,
 .navbar .bi-list {
-  font-size: 1.5rem; /* maior */
-  margin-left: 5px;   /* distancia da borda esquerda */
-  
-}
-
-/* aumenta o sininho também */
-.navbar .bi-bell {
   font-size: 1.5rem;
-  margin-right: 20px;  /* distancia da borda direita */
 }
 
-/* Menu Lateral */
+.navbar .bi-bell {
+  position: relative;
+  margin-right: 20px;
+}
+
+.navbar .bi-list {
+  margin-left: 5px;
+}
+
+/* ==============================
+   MENU LATERAL
+   ============================== */
 #menuLateral {
   width: 250px;
-  background-color: #6E4062; /* roxo escuro */
+  background-color: #6E4062;
   color: white;
 }
 
-/* Cabeçalho do usuário */
 .menu-header {
-  background-color: lch(13.58% 21.94 336.96 / 0.671) ; /* roxo mais claro */
+  background-color: lch(13.58% 21.94 336.96 / 0.671);
   color: white;
   text-align: center;
   padding-bottom: 15px;
@@ -60,7 +55,6 @@
   object-fit: cover;
 }
 
-/* Itens do menu */
 .menu-body .nav-link {
   color: white;
   padding: 10px 20px;
@@ -69,7 +63,7 @@
 }
 
 .menu-body .nav-link:hover {
-  background-color: #7d4f7b; /* roxo mais claro no hover */
+  background-color: #7d4f7b;
   color: #4386DF;
 }
 
@@ -77,10 +71,9 @@
   font-size: 1.2rem;
 }
 
-/* Separar o botão Sair */
+/* Botão Sair fixo no fim do menu */
 .menu-body ul:last-child {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-

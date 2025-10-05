@@ -1,9 +1,10 @@
-/* Navbar roxa */
+/* ==============================
+   NAVBAR
+   ============================== */
 .navbar {
-  background-color: #6E4062 !important; 
+  background-color: #6E4062 !important;
 }
 
-/* Links, textos e ícones brancos */
 .navbar .nav-link,
 .navbar .navbar-brand,
 .navbar a,
@@ -11,42 +12,37 @@
   color: #ffffff !important;
 }
 
-/* Hover azul */
 .navbar .nav-link:hover,
 .navbar a:hover,
 .navbar i:hover {
   color: #4386DF !important;
 }
 
-/* Ícone de notificação maiorzinho */
-.navbar .bi-bell {
-  font-size: 1.5rem;
-  position: relative;
-}
-
-/* aumenta só o ícone do menu lateral */
+.navbar .bi-bell,
 .navbar .bi-list {
-  font-size: 1.5rem; /* maior */
-  margin-left: 5px;   /* distancia da borda esquerda */
-  
-}
-
-/* aumenta o sininho também */
-.navbar .bi-bell {
   font-size: 1.5rem;
-  margin-right: 20px;  /* distancia da borda direita */
 }
 
-/* Menu Lateral */
+.navbar .bi-bell {
+  position: relative;
+  margin-right: 20px;
+}
+
+.navbar .bi-list {
+  margin-left: 5px;
+}
+
+/* ==============================
+   MENU LATERAL
+   ============================== */
 #menuLateral {
   width: 250px;
-  background-color: #6E4062; /* roxo escuro */
+  background-color: #6E4062;
   color: white;
 }
 
-/* Cabeçalho do usuário */
 .menu-header {
-  background-color: lch(13.58% 21.94 336.96 / 0.671) ; /* roxo mais claro */
+  background-color: lch(13.58% 21.94 336.96 / 0.671);
   color: white;
   text-align: center;
   padding-bottom: 15px;
@@ -58,7 +54,6 @@
   object-fit: cover;
 }
 
-/* Itens do menu */
 .menu-body .nav-link {
   color: white;
   padding: 10px 20px;
@@ -67,7 +62,7 @@
 }
 
 .menu-body .nav-link:hover {
-  background-color: #7d4f7b; /* roxo mais claro no hover */
+  background-color: #7d4f7b;
   color: #4386DF;
 }
 
@@ -75,13 +70,15 @@
   font-size: 1.2rem;
 }
 
-/* Separar o botão Sair */
 .menu-body ul:last-child {
   position: absolute;
   bottom: 0;
-   width: 100%;
+  width: 100%;
 }
 
+/* ==============================
+   CONTEÚDO PRINCIPAL
+   ============================== */
 .conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -91,41 +88,34 @@
   padding: 20px;
 }
 
-/* Caixa Quem Somos */
-.quem-somos {
-  background: #ffd3dc;
-  border: 0px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Caixa Quem Somos Alunos*/
+/* QUEM SOMOS */
+.quem-somos,
 .quem-somoss {
   background: #ffd3dc;
-  border: 0px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-top: 100px;  /* 👈 aqui você controla o quanto a caixa desce */
-  padding: 15px;      /* diminui o espaçamento interno */
-  background-color: #ffd3dc;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  max-width: 400px;
-  margin: 100px;
-  height: 200px;  /* altura do quadrado */
+  padding: 20px;
 }
 
+.quem-somoss {
+  margin: 100px;
+  padding: 15px;
+  height: 200px;
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
 
-.quem-somos h2 {
+.quem-somos h2,
+.quem-somoss h3 {
   text-align: center;
   margin-bottom: 15px;
+}
+
+.quem-somos h2 {
   font-size: 1.8rem;
 }
 
 .quem-somoss h3 {
-  text-align: center;
-  margin-bottom: 15px;
   font-size: 1.5rem;
 }
 
@@ -138,14 +128,12 @@
 .creditos {
   margin-top: 20px;
   font-size: 0.9rem;
-  color: #000000;
+  color: #000;
 }
 
-/* Logo centralizada */
+/* LOGO CENTRALIZADA */
 .logo {
   display: flex;
-  margin-left: 0;       /* ajusta horizontalmente */
-  align-self: flex-start; /* ajusta verticalmente */
   align-items: center;
   justify-content: center;
 }
@@ -155,13 +143,12 @@
   height: auto;
 }
 
-/* Parcerias */
+/* PARCERIAS */
 .parcerias {
-  grid-column: span 2; /* ocupa largura inteira */
+  grid-column: span 2;
   text-align: center;
   margin-top: -670px;
-  margin-left: 600px; /* distância da esquerda */
-
+  margin-left: 600px;
 }
 
 .parcerias h3 {

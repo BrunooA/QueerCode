@@ -1,11 +1,28 @@
-/* style.css */
-
-/* Navbar roxa */
-.navbar {
-  background-color: #6E4062 !important; 
+/* ==============================
+   RESET E GERAL
+   ============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Links, textos e ícones brancos */
+html, body {
+  height: 100%;
+  font-family: "Inter", "Roboto", Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==============================
+   NAVBAR
+   ============================== */
+.navbar {
+  background-color: #6E4062 !important;
+}
+
 .navbar .nav-link,
 .navbar .navbar-brand,
 .navbar a,
@@ -13,42 +30,36 @@
   color: #ffffff !important;
 }
 
-/* Hover azul */
 .navbar .nav-link:hover,
 .navbar a:hover,
 .navbar i:hover {
   color: #4386DF !important;
 }
 
-/* Ícone de notificação maiorzinho */
-.navbar .bi-bell {
-  font-size: 1.5rem;
-  position: relative;
-}
-
-/* aumenta só o ícone do menu lateral */
+.navbar .bi-bell,
 .navbar .bi-list {
-  font-size: 1.5rem; /* maior */
-  margin-left: 5px;   /* distancia da borda esquerda */
-  
-}
-
-/* aumenta o sininho também */
-.navbar .bi-bell {
   font-size: 1.5rem;
-  margin-right: 20px;  /* distancia da borda direita */
 }
 
-/* Menu Lateral */
+.navbar .bi-bell {
+  margin-right: 20px;
+}
+
+.navbar .bi-list {
+  margin-left: 5px;
+}
+
+/* ==============================
+   MENU LATERAL
+   ============================== */
 #menuLateral {
   width: 250px;
-  background-color: #6E4062; /* roxo escuro */
+  background-color: #6E4062;
   color: white;
 }
 
-/* Cabeçalho do usuário */
 .menu-header {
-  background-color: lch(13.58% 21.94 336.96 / 0.671) ; /* roxo mais claro */
+  background-color: lch(13.58% 21.94 336.96 / 0.671);
   color: white;
   text-align: center;
   padding-bottom: 15px;
@@ -60,7 +71,6 @@
   object-fit: cover;
 }
 
-/* Itens do menu */
 .menu-body .nav-link {
   color: white;
   padding: 10px 20px;
@@ -69,7 +79,7 @@
 }
 
 .menu-body .nav-link:hover {
-  background-color: #7d4f7b; /* roxo mais claro no hover */
+  background-color: #7d4f7b;
   color: #4386DF;
 }
 
@@ -77,24 +87,25 @@
   font-size: 1.2rem;
 }
 
-/* Separar o botão Sair */
 .menu-body ul:last-child {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-/* Container do campo de busca alinhado à direita */
+/* ==============================
+   BUSCA
+   ============================== */
 .search-container {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
-  position: relative;
-  right: -1050px;
-  width: 300px; /* largura do campo */
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  margin: 0;
+  width: auto;
 }
 
-/* Input de busca */
 .search-input {
   width: 100%;
   padding: 10px 40px 10px 15px;
@@ -105,40 +116,30 @@
   font-size: 14px;
 }
 
-/* Ícone da lupa dentro do input */
 .search-icon {
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
   color: #333;
-  pointer-events: none; /* evita que o ícone bloqueie o clique no input */
+  pointer-events: none;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html,body { height: 100%; }
-body {
-  font-family: "Inter", "Roboto", Arial, sans-serif;
-  background: #ffffff;
-  color: #222;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
-
-/* área que segura a grade (centralizada na página) */
+/* ==============================
+   CARDS
+   ============================== */
 .cards-container {
-  max-width: 1200px;      /* largura máxima da área de cards */
-  margin: 40px auto;      /* centraliza e dá espaçamento vertical */
-  padding: 0 40px;        /* espaçamento lateral */
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px 28px;         /* gap entre linhas e colunas */
+  gap: 36px 28px;
   align-items: start;
 }
 
-/* cada card */
 .card {
-  background: #f6f6f6;            /* leve tom de cinza como na sua imagem */
+  background: #f6f6f6;
   border-radius: 12px;
   padding: 18px 20px;
   box-shadow: 0 6px 16px rgba(18, 18, 18, 0.07);
@@ -146,26 +147,23 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 110px;
-  transition: transform .12s ease, box-shadow .12s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
   outline: none;
 }
 
-/* hover / foco */
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 22px rgba(18,18,18,0.10);
 }
 
-/* estilo quando o card está "selecionado" (como o com borda azul) */
 .card:focus-within,
 .card.selected {
   box-shadow:
     0 10px 22px rgba(18,18,18,0.10),
-    0 0 0 3px rgba(67,138,255,0.20); /* borda azul translúcida */
+    0 0 0 3px rgba(67,138,255,0.20);
   transform: translateY(-2px);
 }
 
-/* cabeçalho do card (logo + nome + localização) */
 .card-header {
   display: flex;
   align-items: center;
@@ -174,34 +172,15 @@ body {
   margin-bottom: 8px;
 }
 
-/* logo circular */
 .logo {
   width: 36px;
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
   flex: 0 0 36px;
-  background: #ffeb3b; /* caso a imagem não carregue, fica amarelo parecido com Mercado Livre */
+  background: #ffeb3b;
 }
 
-/* nome da empresa */
-.card-header .company {
-  flex: 1;
-  margin-left: 12px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #222;
-}
-
-/* localização alinhada à direita (pequeno) */
-.card-header .location {
-  white-space: nowrap;
-  font-size: 13px;
-  color: #8b8b8b;
-  margin-left: 12px;
-}
-
-/* corpo do card */
 .card-body {
   font-size: 13.5px;
   color: #2b2b2b;
@@ -216,14 +195,12 @@ body {
   font-size: 14px;
 }
 
-/* pequenos detalhes como tipo de vaga, salário etc */
 .card-body p {
   margin: 6px 0;
   color: #666;
   font-size: 13px;
 }
 
-/* footer do card (link detalhes) */
 .card-footer {
   text-align: right;
   margin-top: 8px;
@@ -236,13 +213,22 @@ body {
   color: #222;
 }
 
-/* responsividade */
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
 @media (max-width: 1100px) {
-  .cards-container { grid-template-columns: repeat(2, 1fr); max-width: 900px; }
+  .cards-container { 
+    grid-template-columns: repeat(2, 1fr); 
+    max-width: 900px; 
+  }
 }
 
 @media (max-width: 640px) {
-  .cards-container { grid-template-columns: 1fr; padding: 0 20px; gap: 20px; }
+  .cards-container { 
+    grid-template-columns: 1fr; 
+    padding: 0 20px; 
+    gap: 20px; 
+  }
   .card { padding: 14px; }
   .logo { width: 32px; height: 32px; flex: 0 0 32px; }
 }
