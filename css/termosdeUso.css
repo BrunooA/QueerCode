@@ -1,0 +1,94 @@
+/* ==============================
+   RESET E GERAL
+   ============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Inter", "Roboto", Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==============================
+   NAVBAR
+   ============================== */
+.navbar {
+  background-color: #6E4062 !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar a,
+.navbar i {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link:hover,
+.navbar a:hover,
+.navbar i:hover {
+  color: #4386DF !important;
+}
+
+.navbar .bi-bell,
+.navbar .bi-list {
+  font-size: 1.5rem;
+}
+
+.navbar .bi-bell {
+  margin-right: 20px;
+}
+
+.navbar .bi-list {
+  margin-left: 5px;
+}
+
+/* ==============================
+   MENU LATERAL
+   ============================== */
+#menuLateral {
+  width: 250px;
+  background-color: #6E4062;
+  color: white;
+}
+
+.menu-header {
+  background-color: lch(13.58% 21.94 336.96 / 0.671);
+  color: white;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.menu-header img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.menu-body .nav-link {
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-body .nav-link:hover {
+  background-color: #7d4f7b;
+  color: #4386DF;
+}
+
+.menu-body .nav-link i {
+  font-size: 1.2rem;
+}
+
+.menu-body ul:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
